@@ -28,10 +28,14 @@ if(userid==null)
 </ul>
 </div>
 <div align="center">
-<table border="2" bgcolor="blue">
+<table border="2">
 <c:forEach items="${helpList}" var="u">
 <tr>
-<td>${u.helpId} <button><a href="getDetails?help=${u.helpId}" class="a2">Get  Details</a></button></td>
+<td>${u.helpId}</td>
+<td>${u.userId}</td>
+<td>${u.issue}</td>
+<td>${u.description}</td>
+<td>${u.status} <button><a href="reply?msg=${u.helpId}" class="a2">Reply</a></button></td>
 </tr>
 </c:forEach>
 </table>

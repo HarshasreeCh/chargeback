@@ -27,7 +27,7 @@ function validate(){
 	var qstn3=document.getElementById("secretquestion3").value;
 	var ans3=document.getElementById("answer3").value;
 	
-	var pattern=/[A-Za-z0-9]{6,32}/;
+	var pattern=/[A-Za-z0-9 ]{6,32}/;
 	var pattern1=/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
 	var pattern2=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 	var pattern3=/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;

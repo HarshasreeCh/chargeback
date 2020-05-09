@@ -37,7 +37,8 @@ if(userid==null)
 <td>${h1.userId}</td>
 <td>${h1.issue }</td>
 <td>${h1.description}</td>
-<td>${h1.status} <button><a href="reply" class="a2">Reply</a></button>
+<td>${h1.status} <button><a href="reply" class="a2">Reply</a></button></td>
+
 </tr>
 
 </table>

@@ -13,16 +13,16 @@
 
 <h1 color= "white">Chargeback Calculator</h1>
 <ul>
-
+<!-- 
 <li>
 <a href=#>
 <div class="icon">
 <i class="fa fa-home" aria-hidden="true"></i>
 
-</div>
+</div> 
 <div class="name" data-text="Home">Home</div>
 </a>
-</li>
+</li>-->
 <li>
 <a href=admin>
 <div class="icon">

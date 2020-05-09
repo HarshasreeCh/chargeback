@@ -24,7 +24,7 @@ public class Help {
    @Column 
    private String description;
    @Column
-   private String status="new";
+   private String status="Your request hasn't yet Addressed";
 public String getUserId() {
 	return userId;
 }

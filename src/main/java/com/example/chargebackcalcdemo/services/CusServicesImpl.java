@@ -53,11 +53,11 @@ public class CusServicesImpl implements CusServices {
 		 if(c==null)
 		 {
 			 return 1;
-		 }else if(c.getStatus().equals("no"))
+		 }else if(c.getStatus().equals("Wait for Admin acceptance"))
 		 {
 		 	return 2;
 		 }
-		 else if(c.getPassword().equals(cuslogin.getPassword()) && c.getStatus().equals("yes"))
+		 else if(c.getPassword().equals(cuslogin.getPassword3()) && c.getStatus().equals("Activated"))
 		 {
 		 	return 3;
 		 }

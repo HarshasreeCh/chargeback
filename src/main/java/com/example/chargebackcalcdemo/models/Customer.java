@@ -44,7 +44,7 @@ public class Customer implements Serializable {
 	@Column
 	private String password;
 	 @Column
-	  private String status="no";
+	  private String status="Wait for Admin Acceptance";
 	 @Column
 	 private String secretquestion1;
 	@Column

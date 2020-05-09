@@ -57,10 +57,10 @@
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/><br><br>
-
-</form>
 <br><br>
 ${message}
+
+</form>
 
 </div>
 </div> 

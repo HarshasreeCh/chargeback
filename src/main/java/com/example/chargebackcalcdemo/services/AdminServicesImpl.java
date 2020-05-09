@@ -149,7 +149,7 @@ public class AdminServicesImpl implements AdminServices {
 	public boolean activate(String cusId) {
 		Customer c=cdao.findBycusId(cusId);
 		String s=c.getStatus();
-		c.setStatus("yes");
+		c.setStatus("Activated");
 		Customer c1=cdao.save(c);
 		if(c1.getStatus().equals(s))
 		{
@@ -162,7 +162,7 @@ public class AdminServicesImpl implements AdminServices {
 	public boolean deactivate(String cusId) {
 		Customer c=cdao.findBycusId(cusId);
 		String s=c.getStatus();
-		c.setStatus("no");
+		c.setStatus("Deactivated");
 		Customer c1=cdao.save(c);
 		if(c1.getStatus().equals(s)) {
 		return false;

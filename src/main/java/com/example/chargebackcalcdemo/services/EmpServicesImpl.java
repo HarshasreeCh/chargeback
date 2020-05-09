@@ -46,11 +46,11 @@ public class EmpServicesImpl implements EmpServices {
 		 if(e==null)
 		 {
 		   return 1;
-		 }else if(e.getStatus().equals("no"))
+		 }else if(e.getStatus().equals("Wait for Admin acceptance"))
 		 {
 			 	return 2;
 			 }
-			 else if(e.getPassword().equals(emplogin.getPassword()) && e.getStatus().equals("yes"))
+			 else if(e.getPassword().equals(emplogin.getPassword2()) && e.getStatus().equals("Activated"))
 			 {
 			 	return 3;
 			 }

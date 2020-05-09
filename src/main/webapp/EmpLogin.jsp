@@ -10,13 +10,13 @@
 <script type="text/javascript">
 function validate(){
 	var id=document.getElementById("empId").value;
-	var pwd=document.getElementById("password").value;
+	var pwd=document.getElementById("password2").value;
 	if(id==""){
 		document.getElementById("empId").style.borderColor = "red";
 		alert("please update userId field");
 		return false;
 		}else if(pwd==""){
-			document.getElementById("password").style.borderColor = "red";
+			document.getElementById("password2").style.borderColor = "red";
 			alert("please update password field");
 				return false;
 			}
@@ -40,7 +40,7 @@ function validate(){
 </tr>
 <tr>
 <td>Password:</td>
-<td><form:input path="password" class="formcontrol" id="password" type="password"/></td>
+<td><form:input path="password2" class="formcontrol" id="password2" type="password"/></td>
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>

@@ -131,7 +131,7 @@ public class CustomerController {
 				}
 
 	}
-	@GetMapping("/Cushome")
+	@GetMapping("/Custhome")
 	public String h()
 	{
 		return "CusHome";
@@ -366,12 +366,12 @@ public class CustomerController {
 			if(res==0)
 			{
 				
-				model.addAttribute("message",fdq.getCustomerId()+"you are already submitted the feedback");
+				model.addAttribute("message",fdq.getCustomerId()+" you are already submitted the feedback");
 				return "FeedBackpage";
 			}
 			else if(res==1)
 			{
-				model.addAttribute("message",fdq.getCustomerId()+"you are successfully submitted the feedback");
+				model.addAttribute("message",fdq.getCustomerId()+" you are successfully submitted the feedback");
 				return "FeedBackpage";
 			}
 			else {

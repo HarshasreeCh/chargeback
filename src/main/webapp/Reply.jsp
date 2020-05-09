@@ -27,6 +27,9 @@ function validate(){
 </script>
 </head>
 <body>
+<%
+long hid=(long) session.getAttribute("name");
+%>
 <div class="header">
 <h1>Chargeback Calculator</h1>
 </div>
@@ -40,7 +43,7 @@ function validate(){
 <td>
 HelpId:</td>
 <td>
-<form:input path="hid" id="hid"/>
+<form:input path="hid" id="hid" value="${name}"/>
 </td>
 </tr>
 <tr>

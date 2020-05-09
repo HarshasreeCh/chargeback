@@ -12,6 +12,8 @@ public interface feedbackdao extends CrudRepository<Feedbackquestions,Integer>
 {
 	public List<Feedbackquestions>  findAll();
 	public Feedbackquestions findBycustomerId(String customerId);
+	public Feedbackquestions findByfid(long fid);
+	
 
 
 }

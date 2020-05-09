@@ -3,9 +3,7 @@ package com.example.chargebackcalcdemo.models;
 import javax.validation.constraints.NotEmpty;
 
 public class AdminLogin {
-	@NotEmpty(message="This field should not be empty")
 	private String adminId;
-	@NotEmpty(message="This field should not be empty")
 	private String password;
 	
 	public String getAdminId() {

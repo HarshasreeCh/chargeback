@@ -1,6 +1,7 @@
 package com.example.chargebackcalcdemo.controllers;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.chargebackcalcdemo.dao.AdminDao;
 import com.example.chargebackcalcdemo.dao.HelpDao;
+import com.example.chargebackcalcdemo.dao.feedbackdao;
 import com.example.chargebackcalcdemo.models.Admin;
 import com.example.chargebackcalcdemo.models.AdminLogin;
 import com.example.chargebackcalcdemo.models.Customer;
@@ -28,6 +30,7 @@ import com.example.chargebackcalcdemo.services.AdminServices;
 import com.example.chargebackcalcdemo.services.CusServices;
 import com.example.chargebackcalcdemo.services.EmpServices;
 import com.example.chargebackcalcdemo.services.HelpService;
+import com.example.chargebackcalcdemo.services.feed;
 
 
 @Controller
@@ -40,11 +43,15 @@ public class AdminController {
 	private CusServices cusservice;
 	@Autowired
 	private EmpServices empservice;
+	@Autowired
+	private feed fser;
 	
 	@Autowired
 	private AdminDao dao;
 	@Autowired
 	private HelpDao hdao;
+	@Autowired
+	private feedbackdao fdao;
 	
 	@GetMapping("/Adminhome")
 	public String h()
@@ -127,13 +134,14 @@ public class AdminController {
 	
 	}
 	@GetMapping("/reply")
-	public String Reply(Model model)
+	public String Reply(@RequestParam("msg") long hid,Model model,HttpSession session)
 	{
+		session.setAttribute("name",hid);
 		model.addAttribute("rep",new Reply1());
 		return "Reply";
 	}
 	@PostMapping("/replyaction")
-	public String ReplyAction(@ModelAttribute("rep") Reply1 reply,HttpSession session,Model model)
+	public String ReplyAction(@ModelAttribute("rep") Reply1 reply,Model model)
 	{
 		Help hd =hdao.findByhelpId(reply.getHid());
 		hd.setStatus(reply.getReply());
@@ -148,16 +156,18 @@ public class AdminController {
 	{
 		List<Help> helpList=helpservice.helplist();
 		model.addAttribute("helpList", helpList);
+		//System.out.println(helpList);
 		return "HelpList";
+		
 	}
-	@GetMapping(value="/getDetails")
+	/*@GetMapping(value="/getDetails")
 	public String getCustDetails(@RequestParam("help") long hid ,Model model)
 	{
 	    Help h=adminservices.searchByhelpId(hid);
 		model.addAttribute("h1",h);
 		return "HelpList1";
 		
-	}
+	}*/
 	@GetMapping("/forgotuid")
 	public String fid(Model model){
 		model.addAttribute("name",new ForgotUid());
@@ -210,7 +220,17 @@ public class AdminController {
 	public String showUsers(Model m)
 	{
 		List<Customer> cusList=cusservice.cusList();
-		m.addAttribute("cusList", cusList);
+		List<Customer> list=new ArrayList<Customer>();
+		for(Customer c:cusList)
+		{
+			String a=c.getStatus();
+			if(a.equalsIgnoreCase("Wait for Admin acceptance"))
+			{
+				list.add(c);
+			}
+		}
+		m.addAttribute("cusList", list);
+		//System.out.println(list);
 		return "Customers";
 	}
 	@GetMapping("activate")
@@ -218,10 +238,10 @@ public class AdminController {
 		boolean b1=adminservices.activate(custId);
 		if(b1)
 		{
-			model.addAttribute("message","Activated");
+			model.addAttribute("message","Accepted");
 			return "failure";
 		}
-		model.addAttribute("message","Already activated");
+		model.addAttribute("message","Already accepted");
 		return "failure";
 	}
 	@GetMapping("deactivate")
@@ -229,18 +249,27 @@ public class AdminController {
 		boolean b1=adminservices.deactivate(username);
 		if(b1)
 		{
-			model.addAttribute("message","Deactivated");
+			model.addAttribute("message","Rejected");
 			return "failure";
 		
 		}
-		model.addAttribute("message","Already deactivated");
+		model.addAttribute("message","Already rejected");
 		return "failure";
 	}
 	@GetMapping("/employees")
 	public String showEmp(Model m)
 	{
 		List<Employee> empList=empservice.empList();
-		m.addAttribute("empList", empList);
+		List<Employee> list=new ArrayList<Employee>();
+		for(Employee e:empList)
+		{
+			String a=e.getStatus();
+			if(a.equalsIgnoreCase("Wait for Admin acceptance"))
+			{
+				list.add(e);
+			}
+		}
+		m.addAttribute("empList", list);
 		return "Employees";
 	}
 	@GetMapping("accept")
@@ -248,10 +277,10 @@ public class AdminController {
 		boolean b1=adminservices.accept(empId);
 		if(b1)
 		{
-			model.addAttribute("message","Activated");
+			model.addAttribute("message","Accepted");
 			return "failure";
 		}
-		model.addAttribute("message","Already activated");
+		model.addAttribute("message","Already accepted");
 		return "failure";
 	}
 	@GetMapping("reject")
@@ -259,11 +288,11 @@ public class AdminController {
 		boolean b1=adminservices.reject(username);
 		if(b1)
 		{
-			model.addAttribute("message","Deactivated");
+			model.addAttribute("message","Rejected");
 			return "failure";
 		
 		}
-		model.addAttribute("message","Already deactivated");
+		model.addAttribute("message","Already Rejected");
 		return "failure";
 	}
 
@@ -272,7 +301,14 @@ public class AdminController {
 	{
 		List<Feedbackquestions> cusList=adminservices.feedbackList();
 		model.addAttribute("feedlist", cusList);
-		return "adminhome";
+		return "feed";
+	}
+	@GetMapping("/getfeedDetails")
+	public String getFeed(@RequestParam("cust") long fid,Model model)
+	{
+		Feedbackquestions fb=fser.searchByfid(fid);
+		model.addAttribute("feed",fb);
+		return "feed1";
 	}
 	
 	@GetMapping(value="/adminlogout")
@@ -280,7 +316,39 @@ public class AdminController {
 		session.invalidate();
 		return "redirect:/";
 	}
-
+@GetMapping("/pie")
+public String pie(Model model)
+{
+     List<Feedbackquestions> list=fdao.findAll();	
+     int a1[]=new int[5];
+     int a2[]=new int[5];
+     int a3[]=new int[5];
+     int a4[]=new int[5];
+     int a5[]=new int[5];
+     for(Feedbackquestions f:list)
+     {
+    	  a1=fser.findByans1();
+    	  a2=fser.findByans2(); 
+    	  a3=fser.findByans3();
+    	  a4=fser.findByans4();
+    	  a5=fser.findByans5();
+    	 
+     }
+     List list1=new ArrayList();
+     for(int i=0;i<5;i++)
+     {
+    	
+    	list1.add(a1[i]);
+    	list1.add(a2[i]);
+    	list1.add(a3[i]);
+    	list1.add(a4[i]);
+    	list1.add(a5[i]);
+    	
+     }
+     
+     model.addAttribute("last",list1);
+	return "feed";
+}
 	
 	
 	

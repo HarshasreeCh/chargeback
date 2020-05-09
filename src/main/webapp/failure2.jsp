@@ -10,6 +10,6 @@
 <body>
 ${message }
 <br><br>
-<a href="Cushome">Back</a>
+<a href="Custhome">Back</a>
 </body>
 </html>

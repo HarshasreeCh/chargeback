@@ -27,7 +27,7 @@ if(userid==null)
 <li><a href="helpRequests?req=${name}" class="a1">Help Requests</a></li>
 <li><a href="trackstatus" class="a1">Track Complaint Status</a></li>
 <li><a href="beforehelp" class="a1">Help</a></li>
-<li><a href="/feedback1" class="a1">Feedback</a></li>
+<li><a href="feedback1" class="a1">Feedback</a></li>
 <li><a href="cuslogout" class="a1">Logout</a></li>
 </ul>
 </div>

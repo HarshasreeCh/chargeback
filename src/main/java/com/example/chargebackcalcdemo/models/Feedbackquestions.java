@@ -12,6 +12,9 @@ import javax.persistence.Table;
 @Table(name="feedbackTable")
 public class Feedbackquestions {
 	@Id
+	@SequenceGenerator(name = "feedSequence", initialValue = 1000, allocationSize = 1, sequenceName = "FEED_SEQ")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "feedSequence")
+	private long fid;
 	@Column
 	private String customerId;
 	public String getCustomerId() {
@@ -61,10 +64,16 @@ public class Feedbackquestions {
 		this.ans5 = ans5;
 	}
 	
+	public long getFid() {
+		return fid;
+	}
+	public void setFid(long fid) {
+		this.fid = fid;
+	}
 	@Override
 	public String toString() {
-		return "Feedbackquestions [ans1=" + ans1 + ", ans2=" + ans2 + ", ans3=" + ans3 + ", ans4=" + ans4 + ", ans5="
-				+ ans5 + "]";
+		return "Feedbackquestions [fid=" + fid + ", customerId=" + customerId + ", ans1=" + ans1 + ", ans2=" + ans2
+				+ ", ans3=" + ans3 + ", ans4=" + ans4 + ", ans5=" + ans5 + "]";
 	}
 	
 	

@@ -20,7 +20,7 @@ if(userid==null)
 <div class="header">
 <h1>Welcome <span><%=session.getAttribute("name")%></span></h1>
 <ul class="a">
-<li><a href="#" class="a1">New Employees</a></li>
+<li><a href="employees" class="a1">New Employees</a></li>
 <li><a href="feedbkcustomers" class="a1">Feedback Questionaire</a></li>
 <li><a href="acceptuserregisteration" class="a1">Accept Users</a></li>
 <li><a href="helpreq" class="a1">Help Requests</a></li>
@@ -49,8 +49,8 @@ if(userid==null)
    <td>${cus.gender}</td>
    <td>${cus.city}</td>
     <td>${cus.status}
-   <a href="activate?id=${cus.cusId}"><button>Activate</button></a>
-   <a href="deactivate?id=${cus.cusId}"><button>Deactivate</button></a></td> </tr>
+   <a href="activate?id=${cus.cusId}"><button>Accept</button></a>
+   <a href="deactivate?id=${cus.cusId}"><button>Reject</button></a></td> </tr>
    
 </c:forEach>
 </table> 

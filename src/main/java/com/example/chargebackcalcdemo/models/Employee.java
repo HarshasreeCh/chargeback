@@ -33,7 +33,7 @@ public class Employee {
 	@Column
 	private String password;
 	@Column
-	private String status="no";
+	private String status="Wait for Admin acceptance";
 	@Column
 	private String secretquestion1;
 	@Column

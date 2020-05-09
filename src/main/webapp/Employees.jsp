@@ -48,7 +48,7 @@ if(userid==null)
    <td>${cus.dob}</td>
    <td>${cus.gender}</td>
    <td>${cus.city}</td>
-    <td>${cus.status} <a href="accept?id=${cus.empId}"><button>Activate</button></a> <a href="deactivate?id=${cus.empId}"><button>Deactivate</button></a></td>
+    <td>${cus.status} <a href="accept?id=${cus.empId}"><button>Accept</button></a> <a href="reject?id=${cus.empId}"><button>Reject</button></a></td>
    
    </tr>
    
