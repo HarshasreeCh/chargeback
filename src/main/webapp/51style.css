@@ -10,7 +10,8 @@ body
 }
 h1
 {
-	color:#fff
+	color:#fff;
+	font-family:Times New Roman; 
 }
 ul 
 {

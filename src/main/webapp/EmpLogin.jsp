@@ -29,14 +29,13 @@ function validate(){
 <h1>Chargeback Calculator</h1>
 </div>
 <h2>Employee Login</h2>
-<h5>${message}</h5>
 <div class="formdata">
 <div align="center">
 <form:form onsubmit="return validate()" action="login" method="post" modelAttribute="emplogin">
 <table>
 <tr>
 <td>UserId:</td>
-<td><form:input path="empId" class="formcontrol" id="userid"/></td>
+<td><form:input path="empId" class="formcontrol" id="empId"/></td>
 </tr>
 <tr>
 <td>Password:</td>
@@ -53,7 +52,7 @@ ${message }
 <li class="l"><a href="eforgotpswd">Forgot Password</a></li>
 </ul>
 <a href="/">Home</a><br>
-<span>New Employee? </span><a href="empr1">Register</a>
+<span>New Employee? </span><a href="emp">Register</a>
 </div>
 </div>
 </body>

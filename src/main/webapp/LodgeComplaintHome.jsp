@@ -8,6 +8,61 @@
 <meta charset="ISO-8859-1">
 <title>Lodge Complaint</title>
 <link rel="stylesheet" type="text/css" href="/style1.css">
+<script type="text/javascript">
+function validate(){
+	var phno=document.getElementById("contactNumber").value;
+	var eid=document.getElementById("emailid").value;
+	var accno=document.getElementById("bankaccountnumber").value;
+	var bname=document.getElementById("bankname").value;
+	var cback=document.getElementById("chargebackamount").value;
+	var tid=document.getElementById("transactionid").value;
+	var dt=document.getElementById("date").value;
+	var rsn=document.getElementById("reason").value;
+	 if(phno==""){
+			document.getElementById("contactNumber").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+
+	  if(eid==""){
+			document.getElementById("emailid").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(accno==""){
+			document.getElementById("bankaccountnumber").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(bname==""){
+			document.getElementById("bankname").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(cback==""){
+			document.getElementById("chargebackamount").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(tid==""){
+			document.getElementById("transactionid").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(dt==""){
+			document.getElementById("date").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+	  if(rsn==""){
+			document.getElementById("reason").style.borderColor = "red";
+			alert("please update mandatory highlighted fields");
+				return false;
+			}
+		
+		
+}
+</script>
 </head>
 <body>
 <%
@@ -44,7 +99,7 @@ String lastname=(String)session.getAttribute("lastname");
 </tr>
 <tr>
 <td>Bank Branch Name</td>
-<td><form:input path="branchname" class="formcontrol" id="branchname"/></td>
+<td><form:input path="bankname" class="formcontrol" id="branchname"/></td>
 </tr>
 <tr>
 <td>CustomerId</td>
@@ -71,7 +126,7 @@ String lastname=(String)session.getAttribute("lastname");
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>
 <br><br>
-Customer Home<a href="Cushome"> Click here</a>
+Customer Home<a href="Custhome"> Click here</a>
 </form:form>
 </div>
 </div>

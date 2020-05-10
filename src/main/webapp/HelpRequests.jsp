@@ -28,11 +28,11 @@ if(userid==null)
 </ul>
 </div>
 <div align="center">
-<table border="2">
+<table class="content-table"><thead>
 <th>UserId</th>
 <th>Issue</th>
 <th>Description</th>
-<th>Status</th>
+<th>Status</th></thead><tbody>
 <c:forEach items="${h1}" var="u">
 <tr>
 <td>${u.userId}</td>
@@ -41,7 +41,7 @@ if(userid==null)
 <td>${u.status}</td>
 </tr>
 
-</c:forEach>
+</c:forEach></tbody>
 
 </table>
 </div>

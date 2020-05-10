@@ -12,7 +12,7 @@ function validate(){
 	var pwd=document.getElementById("password").value;
 	 if(pwd==""){
 			document.getElementById("password").style.borderColor = "red";
-			alert("please update mandatory highlighted fields");
+			alert("please update password field");
 				return false;
 			}
 }
@@ -36,7 +36,7 @@ function validate(){
 </tr>
 <tr>
 <td>Password:</td>
-<td><form:input path="pwd" class="formcontrol" id="pwd" type="password"/></td>
+<td><form:input path="pwd" class="formcontrol" id="password" type="password"/></td>
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>

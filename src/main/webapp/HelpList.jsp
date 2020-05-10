@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin home</title>
+<title>Help</title>
 <link rel="stylesheet" type="text/css" href="/style1.css">
 </head>
 <body>
@@ -28,7 +28,12 @@ if(userid==null)
 </ul>
 </div>
 <div align="center">
-<table border="2">
+<table class="content-table"><thead>
+<th>HelpId</th>
+<th>User Id</th>
+<th>Issue</th>
+<th>Description</th>
+<th>Reply</th></thead><tbody>
 <c:forEach items="${helpList}" var="u">
 <tr>
 <td>${u.helpId}</td>
@@ -37,7 +42,7 @@ if(userid==null)
 <td>${u.description}</td>
 <td>${u.status} <button><a href="reply?msg=${u.helpId}" class="a2">Reply</a></button></td>
 </tr>
-</c:forEach>
+</c:forEach></tbody>
 </table>
 </div>
 

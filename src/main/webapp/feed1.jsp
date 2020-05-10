@@ -29,7 +29,7 @@ if(userid==null)
 </div>
 
 <div align="center">
-<table border="1">
+<table class="content-table"><tbody>
 <tr>
 <td>Serial No:${feed.fid}</td>
 <td>Customer name : ${feed.customerId}</td></tr>
@@ -42,7 +42,7 @@ if(userid==null)
 <td>The website works well technically loading quickly and displaying appropriatley:</td>
 <td>${feed.ans4}</td></tr><tr>
 <td>The website meets my needs:</td>
-<td>${feed.ans5}</td></tr></table><br>
+<td>${feed.ans5}</td></tr></tbody></table><br>
 
 
 

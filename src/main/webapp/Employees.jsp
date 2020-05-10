@@ -30,16 +30,16 @@ if(userid==null)
 
 <div align="center">
 
- <table border="1">
+ <table class="content-table"><thead>
 <tr>
-<th>EmpID</th>
+<th>Employee UserID</th>
 <th>First name</th>
 <th>Last name</th>
 <th> Dob</th>
 <th> Gender</th>
  <td>City</td>
 <th> Status</th>
-</tr>
+</tr></thead><tbody>
 <c:forEach items="${empList}" var="cus">
    <tr>
    <td>${cus.empId}</td>
@@ -52,6 +52,6 @@ if(userid==null)
    
    </tr>
    
-</c:forEach>
+</c:forEach></tbody>
 </table> 
 </div></body></html>

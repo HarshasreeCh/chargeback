@@ -47,13 +47,15 @@ if(userid==null)
 </div>
 <hr>
 <div align="center">
-<table border="2" bgcolor="blue">
+<table class="content-table"><thead>
+<th>Customer Id</th>
+<th>Details</th></thead><tbody>
 <c:forEach items="${CustIDs}" var="cid">
 <tr>
 <td>${cid}</td>
 <td><a href="getCustDetails?cust=${cid}">Get Customer Details</a></td>
 </tr>
-</c:forEach>
+</c:forEach></tbody>
 </table>
 </div>
 </div>

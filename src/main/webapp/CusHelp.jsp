@@ -58,8 +58,11 @@
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/><br><br>
 <br><br>
-${message}
+<div align="center" >
+<div class="formdata2">
 
+${message}
+</div></div>
 </form>
 
 </div>

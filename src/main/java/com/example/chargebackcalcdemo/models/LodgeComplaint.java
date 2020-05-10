@@ -28,7 +28,7 @@ public class LodgeComplaint {
 	@Column
 	private String bankaccountnumber;
 	@Column
-	private String branchname;
+	private String bankname;
 	@Column
 	private String transactionid;
 	@Column
@@ -46,7 +46,7 @@ public class LodgeComplaint {
 	@Override
 	public String toString() {
 		return "LodgeComplaint [firstname=" + firstname + ", lastname=" + lastname + ", contactnumber=" + contactnumber
-				+ ", emailid=" + emailid + ", bankaccountnumber=" + bankaccountnumber + ", branchname=" + branchname
+				+ ", emailid=" + emailid + ", bankaccountnumber=" + bankaccountnumber + ", bankname=" + bankname
 				+ ", transactionid=" + transactionid + ", customerid=" + customerid + ", chargebackamount="
 				+ chargebackamount + ", date=" + date + ", reason=" + reason + ", status=" + status + ", view=" + view
 				+ "]";
@@ -90,15 +90,17 @@ public class LodgeComplaint {
 	public void setBankaccountnumber(String bankaccountnumber) {
 		this.bankaccountnumber = bankaccountnumber;
 	}
-	public String getBranchname() {
-		return branchname;
-	}
-	public void setBranchname(String branchname) {
-		this.branchname = branchname;
-	}
 	public long getCustomerid() {
 		return customerid;
 	}
+	public String getBankname() {
+		return bankname;
+	}
+
+	public void setBankname(String bankname) {
+		this.bankname = bankname;
+	}
+
 	public void setCustomerid(long customerid) {
 		this.customerid = customerid;
 	}

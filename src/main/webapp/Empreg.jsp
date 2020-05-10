@@ -11,7 +11,7 @@
 function validate(){
 	var fname=document.getElementById("firstName").value;
 	var lname=document.getElementById("lastName").value;
-	var dob=document.getElementById("dob").value;
+	var dob1=document.getElementById("dob").value;
 	var gender=document.getElementById("gender").value;
 	var phone=document.getElementById("contactNumber").value;
 	var address=document.getElementById("address").value;
@@ -27,8 +27,8 @@ function validate(){
 	var qstn3=document.getElementById("secretquestion3").value;
 	var ans3=document.getElementById("answer3").value;
 	
-	var pattern=/[A-Za-z]{6,32}/;
-	var pattern1=/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+	var pattern=/[A-Za-z ]{6,32}/;
+	var pattern1=/^([+91]{3})-([0-9]{10})$/;
 	var pattern2=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 	var pattern3=/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
 	if(fname==""){
@@ -41,14 +41,14 @@ function validate(){
 		document.getElementById("lastName").style.borderColor="red";
 		return false;
 		}
-	 if(dob==""){
-		document.getElementById("Age").style.borderColor="red";
+	 if(dob1==""){
+		document.getElementById("dob").style.borderColor="red";
 		alert("Please update Dob field");
 		return false;
 		}
 	 if(gender==""){
 		alert("Please update Gender field");
-			document.getElementById("Gender").style.borderColor="red";
+			document.getElementById("gender").style.borderColor="red";
 			return false;
 			}
 	 if(phone==""){
@@ -142,7 +142,7 @@ function validate(){
 		return false;
 		
 		}		
-	 if(!pattern3.test(dob)){
+	 if(!pattern3.test(dob1)){
 			alert("Please update DoB as dd-mm-yyyy");
 			document.getElementById("dob").style.borderColor="red";
 			return false;
@@ -191,7 +191,7 @@ function validate(){
 </tr>
 <tr>
 <td>City:</td>
-<td><form:input path="city" id="state" />
+<td><form:input path="city" id="city" />
 </td>
 </tr>
 <tr>

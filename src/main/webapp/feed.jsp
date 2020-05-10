@@ -106,12 +106,14 @@ if(userid==null)
 </div>
 
 <div align="center">
-<table border="1">
+<table class="content-table">
+<thead><th>Serial No.</th>
+<th>Details</th></thead><tbody>
 <c:forEach items="${feedlist}" var="c">
 
 <tr>
 <td>${c.fid}</td>
-<td><a href="getfeedDetails?cust=${c.fid}">Get Feedback Details</a></td></tr></c:forEach></table></div>
+<td><a href="getfeedDetails?cust=${c.fid}">Get Feedback Details</a></td></tr></c:forEach></tbody></table></div>
 <br><br><a href="pie" class="a1">Graph</a>
 <div align="center"><br><br>
 <div id="chartContainer" style="height: 300px; width: 40%;"></div></div>

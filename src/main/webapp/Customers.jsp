@@ -30,16 +30,16 @@ if(userid==null)
 
 <div align="center">
 
- <table border="1">
+ <table class="content-table"><thead>
 <tr>
-<th>CusID</th>
+<th>Customer UserID</th>
 <th>First name</th>
 <th>Last name</th>
-<th> dob</th>
-<th> gender</th>
- <td>city</td>
-<th> status</th>
-</tr>
+<th> Dob</th>
+<th> Gender</th>
+ <td>City</td>
+<th> Status</th>
+</tr></thead><tbody>
 <c:forEach items="${cusList}" var="cus">
    <tr>
    <td>${cus.cusId}</td>
@@ -50,8 +50,8 @@ if(userid==null)
    <td>${cus.city}</td>
     <td>${cus.status}
    <a href="activate?id=${cus.cusId}"><button>Accept</button></a>
-   <a href="deactivate?id=${cus.cusId}"><button>Reject</button></a></td> </tr>
+   <a href="deactivate?id=${cus.cusId}"><button>Reject</button></a></td> 
    
-</c:forEach>
+</c:forEach></tbody>
 </table> 
 </div></body></html>

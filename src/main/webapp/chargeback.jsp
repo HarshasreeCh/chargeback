@@ -27,19 +27,19 @@ if(userid==null)
 </div>
 <div align="center" >
 <c:forEach items="${lodge}" var="l">
-<table border="2">
+<table class="content-table"><thead>
 
 <th>Account Number</th>
 <th>Date</th>
 <th>Chargeback Amount</th>
 <th>Reason</th>
-<th>Status</th>
+<th>Status</th></thead><tbody>
 <tr>
 <td>${l.bankaccountnumber}</td>
 <td>${l.date}</td>
 <td>${l.chargebackamount}</td>
 <td>${l.reason}</td>
-<td><button><a href="eaccept?acc=${l.bankaccountnumber}">Accept</a></button> <button><a href="ereject?acc=${l.bankaccountnumber}">Reject</a></button></td>
+<td><button><a href="eaccept?acc=${l.bankaccountnumber}">Accept</a></button> <button><a href="ereject?acc=${l.bankaccountnumber}">Reject</a></button></td></tr></tbody>
 </table><br>
 </c:forEach>
 </div>

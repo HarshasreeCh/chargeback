@@ -47,7 +47,7 @@ if(userid==null)
 </div>
 <hr>
 <div>
-<table border="2" bgcolor="blue">
+<table class="content-table">
 <c:forEach items="${CustIDs}" var="cid">
 <tr>
 <td>${cid}</td>
@@ -56,7 +56,7 @@ if(userid==null)
 </c:forEach>
 </table>
 </div>
-<table border="2" bgcolor="blue">
+<table class="content-table"><tbody>
 <tr>
 <td>${customer.firstName}</td>
 <td>${customer.lastName}</td>
@@ -70,11 +70,11 @@ if(userid==null)
 <c:forEach items="${customer.transacList}" var="tlist"> 
 <td>${tlist.transactionid}</td>
 <td>${tlist.transationamount}</td>
-<td>${tlist.transactiondate}</td></tr>
+<td>${tlist.transactiondate}</td></tr></tbody>
 </c:forEach> 
 </table>
 <div align="center">
-<table border="2" bgcolor="blue">
+<table class="content-table"><tbody>
 <tr>
 <td>${searchCustomer.firstName}</td>
 <td>${searchCustomer.lastName}</td>
@@ -90,22 +90,8 @@ if(userid==null)
 <td>${tlist.transationamount}</td>
 <td>${tlist.transactiondate}</td></tr>
 </c:forEach> 
-</tr>
+</tr></tbody>
 </table>
 </div>
-<%-- <td>${customer.firstName}</td>
-<td>${customer.firstName}</td>
-<td>${customer.firstName}</td>
-<td>${customer.firstName}</td>
-<td>${customer.firstName}</td>
-<td>${customer.firstName}</td>
-<td>${customer.firstName}</td> --%>
-
-<%-- <c:forEach items="${customer}" var="c">
-<tr>
-<td>${c.firstName }</td>
-<td>${c.lastName }</td>
-</tr>
-</c:forEach> --%>
 </body>
 </html>

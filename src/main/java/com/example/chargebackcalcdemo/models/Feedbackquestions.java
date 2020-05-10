@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name="feedbackTable")
 public class Feedbackquestions {
 	@Id
-	@SequenceGenerator(name = "feedSequence", initialValue = 1000, allocationSize = 1, sequenceName = "FEED_SEQ")
+	@SequenceGenerator(name = "feedSequence", initialValue = 1, allocationSize = 1, sequenceName = "FEED_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "feedSequence")
 	private long fid;
 	@Column

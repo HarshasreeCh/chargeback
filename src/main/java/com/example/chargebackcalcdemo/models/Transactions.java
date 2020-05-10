@@ -62,21 +62,6 @@ public class Transactions implements Serializable {
 		this.transactiondate = transactiondate;
 		this.transationamount = transationamount;
 	}
-
-	  @OneToMany(targetEntity=Loan.class ,cascade = CascadeType.ALL)
-	  
-	  @JoinColumn(name="transactionid", referencedColumnName ="transactionid" )
-	 	
-	
-	 private List<Loan> loanList;
-
-	
-	public List<Loan> getLoanList() {
-		return loanList;
-	}
-	public void setLoanList(List<Loan> loanList) {
-		this.loanList = loanList;
-	}
 	public Transactions() {
 		super();
 	}
@@ -84,8 +69,7 @@ public class Transactions implements Serializable {
 	@Override
 	public String toString() {
 		return "Transactions [transactionid=" + transactionid + ", transactiondate=" + transactiondate
-				+ ", transationamount=" + transationamount + ", transactionBy=" + transactionBy + ", loanList="
-				+ loanList + "]";
+				+ ", transationamount=" + transationamount + ", transactionBy=" + transactionBy + "]";
 	}
 	
 	

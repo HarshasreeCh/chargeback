@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="/style1.css">
 
-<title>Generate Report</title>
+<title>GenerateReport</title>
 </head>
 <body>
 <div align="center">
@@ -21,6 +21,8 @@
 <li><a href="statusofcomplaints"><button>StatusOfComplaints</button></a></li>
 </ul>
  </div>
-
+ 
+<h1>Number of complaints Raised:${ccount}</h1> <br><br>
+<a href="Emphome">Employee Home</a>
 </body>
 </html>

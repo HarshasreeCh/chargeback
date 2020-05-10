@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Feedback</title>
 <link rel="stylesheet" type="text/css" href="/style1.css"/>
 </head>
 <body>
@@ -19,12 +19,19 @@ long userid =(long) session.getAttribute("customerid");
 <h2>Customer Feedback</h2>
 <div align="center">
 <form:form onsubmit="return validate()" action="feedbackques" modelAttribute="feedbk" method="post">
-<table border="2">
+
 
 Enter Your Name:
 <form:input path="customerId" id="customerId"></form:input>
+<table class="content-table"><thead>
+<th>Questions</th>
+<th>Agree</th>
+<th>Disagree</th>
+<th>Strongly Agree</th>
+<th>Strongly Disagree</th>
+<th>Neither Agree Nor Disagree</th></thead>
+<tbody>
 <tr>
-<td>Questions</td><td>Agree</td><td>Disagree</td><td>Strongly Agree</td><td>Strongly Disagree</td><td>Neither Agree Nor Disagree</td></tr><tr>
 <td>Information on the website is clear and easy to understand:</td>
 <td><form:radiobutton path="ans1" value="Agree" id="ans1" /></td>
 <td>
@@ -83,7 +90,7 @@ Enter Your Name:
 <form:radiobutton path="ans5" value="Stronglydisagree" id="ans5" /></td>
 <td>
 <form:radiobutton path="ans5" value="None" id="ans5" /></td>
-</tr>
+</tr></tbody>
 </table>
 <input type="submit" value ="submit"/>
 <a href="Custhome" >BACK</a>

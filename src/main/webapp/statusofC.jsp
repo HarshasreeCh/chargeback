@@ -24,15 +24,15 @@
  <div align="center">
 <c:forEach items="${status}" var="status">
 
-<table border="2">
+<table class="content-table"><thead>
 <tr>
 <th>TransactionId</th>
 <th>CustomerId</th>
-<th>Status</th>
+<th>Status</th></tr></thead><tbody>
 <tr>
 <td>${status.transactionid}</td>
 <td>${status.customerid}</td>
-<td>${status.status}</td>
+<td>${status.status}</td></tr></tbody>
 
 </table>
 </c:forEach>

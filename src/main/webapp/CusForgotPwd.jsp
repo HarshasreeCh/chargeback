@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Forgot User id</title>
+<title>Forgot Password</title>
 <link rel="stylesheet" type="text/css" href="/style1.css">
 <script type="text/javascript">
 function validate(){
@@ -21,35 +21,38 @@ function validate(){
 		document.getElementById("qstn1").style.borderColor = "red";
 		alert("please select the first secret question");
 		return false;
-		}else if(answr==""){
-			document.getElementById("ans").style.borderColor = "red";
+		}
+	 if(answr1==""){
+			document.getElementById("ans1").style.borderColor = "red";
 			alert("please update first answer field");
 				return false;
 			}
-		else if(qsn2==""){
+     if(qsn2==""){
 		document.getElementById("qstn2").style.borderColor = "red";
 		alert("please select the second secret question");
 		return false;
-		}else if(answr2==""){
+		}
+		 if(answr2==""){
 			document.getElementById("ans2").style.borderColor = "red";
 			alert("please update second answer field");
 				return false;
 			}
 
-		else if(qsn3==""){
+		 if(qsn3==""){
 		document.getElementById("qstn3").style.borderColor = "red";
 		alert("please select the third secret question");
 		return false;
-		}else if(answr3==""){
+		}
+			 if(answr3==""){
 			document.getElementById("ans3").style.borderColor = "red";
-			alert("please update first answer field");
+			alert("please update third answer field");
 				return false;
 			}
 	
-		else if(userid=="")
+		if(userid=="")
 			{
 			document.getElementById("uid").style.borderColor = "red";
-			alert("please update contact number field");
+			alert("please update UserId field");
 				return false;
 			
 			}
@@ -62,7 +65,7 @@ function validate(){
 <div class="header">
 <h1>Chargeback Calculator</h1>
 </div>
-<h2>Forgot Userid??</h2>
+<h2>Forgot Password??</h2>
 <div class="formdata3">
 <div align="center">
 <form:form onsubmit="return validate()" action="cforgotpwd1" method="post" modelAttribute="name1">

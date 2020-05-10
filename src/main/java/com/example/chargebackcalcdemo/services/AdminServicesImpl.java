@@ -174,7 +174,7 @@ public class AdminServicesImpl implements AdminServices {
 	public boolean accept(String empId) {
 		Employee c=edao.findByempId(empId);
 		String s=c.getStatus();
-		c.setStatus("yes");
+		c.setStatus("Activated");
 		Employee c1=edao.save(c);
 		if(c1.getStatus().equals(s))
 		{
@@ -188,7 +188,7 @@ public class AdminServicesImpl implements AdminServices {
 	public boolean reject(String empId) {
 		Employee c=edao.findByempId(empId);
 		String s=c.getStatus();
-		c.setStatus("no");
+		c.setStatus("Deactiavted");
 		Employee c1=edao.save(c);
 		if(c1.getStatus().equals(s)) {
 		return false;

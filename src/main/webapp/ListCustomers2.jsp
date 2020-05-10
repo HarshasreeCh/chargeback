@@ -22,20 +22,21 @@ if(userid==null)
 <div class="header">
 <h1>Welcome <span><%=session.getAttribute("name")%></span></h1>
 <ul class="a">
+<li><a href="report" class="a1">Generate Report</a>
 <li><a href="Transactions" class="a1">List of Customers</a></li>
 <li><a href="complaints" class="a1">Chargeback Details</a></li>
 <li><a href="emplogout" class="a1">Logout</a></li>
 </ul>
  <!-- ...................................... -->
 <div align="center">
-<table border="2">
+<table class="content-table"><thead>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>dob</th>
 <th>AccountNumber</th>
 <th>Bank Name</th>
 <th>Bank Address</th>
-<th>Available Bal</th>
+<th>Available Bal</th></thead><tbody>
 <tr>
 <td>${searchCustomer.firstName}</td>
 <td>${searchCustomer.lastName}</td>
@@ -44,21 +45,21 @@ if(userid==null)
 <td>${b.bankacno}</td>
 <td>${b.branchname}</td>
 <td>${b.branchaddress}</td>
-<td>${b.avlbal}</td></tr>
+<td>${b.avlbal}</td></tr></tbody>
 </c:forEach>
 </table><br>
 Transactions of ${searchCustomer.firstName} ${searchCustomer.lastName}
-<table border="2">
+<table class="content-table"><thead>
 <th>Transaction Id   </th>
 <th>Transaction Amount  </th>
-<th>Transaction Date</th>
+<th>Transaction Date</th></thead><tbody>
 
 <c:forEach items="${searchCustomer.transacList}" var="tlist"> 
 <tr>
 <td>${tlist.transactionid}</td>
 <td>${tlist.transationamount}</td>
 <td>${tlist.transactiondate}</td></tr>
-</c:forEach> 
+</c:forEach> </tbody>
 </tr>
 </table>
 </div>

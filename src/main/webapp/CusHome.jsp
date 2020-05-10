@@ -32,21 +32,25 @@ if(userid==null)
 </ul>
 </div>
 <br><br>
-<div align="center">
-<table border="2">
+<!-- <div align="center">
+<table class="content-table"><thead>
+<th>TransactionId</th>
+<th>Transaction Data</th>
+<th>Transaction Amount</th>
+<th>Lodge Complaint</thead>
 <c:forEach items="${custtransactionlist}" var="transactions">
-<tr>
+<tbody><tr>
 <td>${transactions.transactionid}</td>
 <td>${transactions.transactiondate}</td>
 <td>${transactions.transationamount}</td>
 
 <td> <a href="/LodgeComplaint?transactionid=${transactions.transactionid}" style="color: yellow;">Lodge A Complaint</a> </td>
-</tr>
+</tr></tbody>
 
 </c:forEach>
 
 </table>
-</div>
+</div> -->
 <br><br>${message}
 </body>
 </html>

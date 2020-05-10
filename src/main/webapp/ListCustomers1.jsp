@@ -28,14 +28,14 @@ if(userid==null)
 </ul>
  <!-- ...................................... -->
 <div align="center">
-<table border="2">
+<table class="content-table"><thead>
 <th>Firstname</th>
 <th>Lastname</th>
 <th>dob</th>
 <th>AccountNumber</th>
 <th>Bank Name</th>
 <th>Bank Address</th>
-<th>Available Bal</th>
+<th>Available Bal</th></thead><tbody>
 <tr>
 <td>${customer.firstName}</td>
 <td>${customer.lastName}</td>
@@ -44,21 +44,21 @@ if(userid==null)
 <td>${b.bankacno}</td>
 <td>${b.branchname}</td>
 <td>${b.branchaddress}</td>
-<td>${b.avlbal}</td></tr>
+<td>${b.avlbal}</td></tr></tbody>
 </c:forEach>
 </table><br>
 Transactions of ${customer.firstName} ${customer.lastName}
-<table border="2">
+<table class="content-table"><thead>
 <th>Transaction Id   </th>
 <th>Transaction Amount  </th>
-<th>Transaction Date</th>
+<th>Transaction Date</th></thead><tbody>
 
 <c:forEach items="${customer.transacList}" var="tlist"> 
 <tr>
 <td>${tlist.transactionid}</td>
 <td>${tlist.transationamount}</td>
 <td>${tlist.transactiondate}</td></tr>
-</c:forEach> 
+</c:forEach> </tbody>
 </table>
 </div>
 </body>

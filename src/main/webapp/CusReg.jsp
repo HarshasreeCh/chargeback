@@ -28,7 +28,7 @@ function validate(){
 	var ans3=document.getElementById("answer3").value;
 	
 	var pattern=/[A-Za-z ]{6,32}/;
-	var pattern1=/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+	var pattern1=/^([+91]{3})-([0-9]{10})$/;
 	var pattern2=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 	var pattern3=/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
 	if(fname==""){
@@ -42,13 +42,13 @@ function validate(){
 		return false;
 		}
 	 if(dob==""){
-		document.getElementById("Age").style.borderColor="red";
+		document.getElementById("dob").style.borderColor="red";
 		alert("Please update Dob field");
 		return false;
 		}
 	 if(gender==""){
 		alert("Please update Gender field");
-			document.getElementById("Gender").style.borderColor="red";
+			document.getElementById("gender").style.borderColor="red";
 			return false;
 			}
 	 if(phone==""){
@@ -191,7 +191,7 @@ function validate(){
 </tr>
 <tr>
 <td>City:</td>
-<td><form:input path="city" id="state" />
+<td><form:input path="city" id="city" />
 </td>
 </tr>
 <tr>

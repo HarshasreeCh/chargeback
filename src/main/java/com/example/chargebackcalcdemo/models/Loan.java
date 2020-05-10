@@ -22,6 +22,8 @@ public class Loan {
  private String duedate;
  @Column
  private String loanname;
+ @Column 
+ private String loanamount;
  @Column
  private String lateCharge;
  @Column
@@ -29,6 +31,12 @@ public class Loan {
  @Column
  private String emiMonths;
  
+public String getLoanamount() {
+	return loanamount;
+}
+public void setLoanamount(String loanamount) {
+	this.loanamount = loanamount;
+}
 public String getEmiMonths() {
 	return emiMonths;
 }
@@ -74,7 +82,8 @@ public void setLateCharge(String lateCharge) {
 @Override
 public String toString() {
 	return "Loan [loanId=" + loanId + ", emi=" + emi + ", duedate=" + duedate + ", loanname=" + loanname
-			+ ", lateCharge=" + lateCharge + ", loandate=" + loandate + ", emiMonths=" + emiMonths + "]";
+			+ ", loanamount=" + loanamount + ", lateCharge=" + lateCharge + ", loandate=" + loandate + ", emiMonths="
+			+ emiMonths + "]";
 }
  
 }

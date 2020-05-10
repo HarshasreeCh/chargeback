@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Login</title>
+<title>Reset Password</title>
 <link rel="stylesheet" type="text/css" href="/style1.css"/>
 <script type="text/javascript">
 function validate(){
@@ -36,7 +36,7 @@ function validate(){
 </tr>
 <tr>
 <td>Password:</td>
-<td><form:input path="pwd" class="formcontrol" id="pwd" type="password"/></td>
+<td><form:input path="pwd" class="formcontrol" id="password" type="password"/></td>
 </tr>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>

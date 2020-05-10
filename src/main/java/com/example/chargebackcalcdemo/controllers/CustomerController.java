@@ -144,7 +144,7 @@ public class CustomerController {
 		Customer c = cusservices.findByCutomerId(customerid);
 		List<Transactions> translist=c.getTransacList();
 		model.addAttribute("custtransactionlist", translist);
-		return 	"CusHome";
+		return 	"transaction";
 	
 	}
 	

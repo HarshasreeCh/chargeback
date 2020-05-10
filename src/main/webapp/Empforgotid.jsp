@@ -21,34 +21,37 @@ function validate(){
 		document.getElementById("qstn1").style.borderColor = "red";
 		alert("please select the first secret question");
 		return false;
-		}else if(answr==""){
-			document.getElementById("ans").style.borderColor = "red";
+		}
+	if(answr1==""){
+			document.getElementById("ans1").style.borderColor = "red";
 			alert("please update first answer field");
 				return false;
 			}
-		else if(qsn2==""){
+    if(qsn2==""){
 		document.getElementById("qstn2").style.borderColor = "red";
 		alert("please select the second secret question");
 		return false;
-		}else if(answr2==""){
+		}
+	 if(answr2==""){
 			document.getElementById("ans2").style.borderColor = "red";
 			alert("please update second answer field");
 				return false;
 			}
 
-		else if(qsn3==""){
+		if(qsn3==""){
 		document.getElementById("qstn3").style.borderColor = "red";
 		alert("please select the third secret question");
 		return false;
-		}else if(answr3==""){
+		}
+		if(answr3==""){
 			document.getElementById("ans3").style.borderColor = "red";
-			alert("please update first answer field");
+			alert("please update third answer field");
 				return false;
 			}
 	
-		else if(phn=="")
+		 if(phn=="")
 			{
-			document.getElementById("phn").style.borderColor = "red";
+			document.getElementById("phno").style.borderColor = "red";
 			alert("please update contact number field");
 				return false;
 			

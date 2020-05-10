@@ -35,7 +35,7 @@ function validate(){
 <table>
 <tr>
 <td>UserId:</td>
-<td><form:input path="adminId" class="formcontrol" id="userid"/></td>
+<td><form:input path="adminId" class="formcontrol" id="adminId"/></td>
 </tr>
 <tr>
 <td>Password:</td>

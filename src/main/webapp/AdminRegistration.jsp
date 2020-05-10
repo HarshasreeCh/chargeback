@@ -28,7 +28,7 @@ function validate(){
 	var ans3=document.getElementById("answer3").value;
 	
 	var pattern=/[A-Za-z0-9 ]{6,32}/;
-	var pattern1=/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+	var pattern1=/^([+91]{3})-([0-9]{10})$/;
 	var pattern2=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 	var pattern3=/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
 	if(fname==""){
@@ -159,6 +159,7 @@ function validate(){
 </div>
 <h2>Admin Registration</h2>
 <div class="formdata">
+<div align="center">
 <form:form onsubmit="return validate()" action="adminreg" modelAttribute="admin" method="post">
 <!-- First Name, Last Name, Age, Gender, Contact Number, Admin Id, Password -->
 <table>
@@ -192,7 +193,7 @@ function validate(){
 </tr>
 <tr>
 <td>City:</td>
-<td><form:input path="city" id="state" />
+<td><form:input path="city" id="city" />
 </td>
 </tr>
 <tr>
@@ -269,7 +270,7 @@ function validate(){
 
 </table>
 <input type="submit" value ="submit" class="formsubmitbutton"/>
-</form:form>
+</form:form></div>
 Already having account?<a href="adminlogin">Login</a>
 <br><br>
 <a href="/">Home</a>

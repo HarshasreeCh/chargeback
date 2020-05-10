@@ -15,7 +15,8 @@ function validate(){
 		document.getElementById("cusId").style.borderColor = "red";
 		alert("please update userId field");
 		return false;
-		}else if(pwd==""){
+		}
+	 if(pwd==""){
 			document.getElementById("password3").style.borderColor = "red";
 			alert("please update password field");
 				return false;
@@ -35,7 +36,7 @@ function validate(){
 <table>
 <tr>
 <td>UserId:</td>
-<td><form:input path="cusId" class="formcontrol" id="userid"/></td>
+<td><form:input path="cusId" class="formcontrol" id="cusId"/></td>
 </tr>
 <tr>
 <td>Password:</td>

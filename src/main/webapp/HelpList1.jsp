@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin home</title>
+<title>Help</title>
 <link rel="stylesheet" type="text/css" href="/style1.css">
 </head>
 <body>
