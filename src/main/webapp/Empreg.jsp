@@ -81,7 +81,7 @@ function validate(){
 		
 	 if(id==""){
 			alert("Please update UserId field");
-			document.getElementById("cusId").style.borderColor="red";
+			document.getElementById("empId").style.borderColor="red";
 			return false;
 			}
 		

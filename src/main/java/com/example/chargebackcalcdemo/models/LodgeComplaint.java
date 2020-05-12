@@ -40,7 +40,7 @@ public class LodgeComplaint {
 	@Column
 	private String reason;
 	@Column
-	private String status="new";
+	private String status="Not yet addressed";
 	@Column
 	private String view;
 	@Override

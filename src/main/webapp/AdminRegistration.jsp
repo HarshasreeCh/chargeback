@@ -42,7 +42,7 @@ function validate(){
 		return false;
 		}
 	 if(dob==""){
-		document.getElementById("Age").style.borderColor="red";
+		document.getElementById("dob").style.borderColor="red";
 		alert("Please update Dob field");
 		return false;
 		}
@@ -81,7 +81,7 @@ function validate(){
 		
 	 if(id==""){
 			alert("Please update UserId field");
-			document.getElementById("cusId").style.borderColor="red";
+			document.getElementById("adminId").style.borderColor="red";
 			return false;
 			}
 		

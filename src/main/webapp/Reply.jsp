@@ -53,7 +53,7 @@ HelpId:</td>
 </table>
 <input type="submit" value="submit" class="formsubmitbutton"/>
 </form:form>
-Admin home <a href="adminlogin">Click here</a>
+
 <br>
 <br>
 ${message}

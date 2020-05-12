@@ -18,63 +18,63 @@ window.onload = function () {
 		data: [              
 		{
 			type: "column",
-			name:"Question 1",
+			name:"Agree",
 			showInLegend: true,
 			dataPoints: [
-				{ label: "Answer1",  y: ${last.get(0)} },
-				{ label: "Answer2", y: ${last.get(5)}  },
-				{ label: "Answer3", y: ${last.get(10)} },
-				{ label: "Answer4",  y: ${last.get(15)}},
-				{ label: "Answer5",  y: ${last.get(20)} }
+				{ label: "Question1",  y: ${last.get(0)} },
+				{ label: "Question2", y: ${last.get(5)}  },
+				{ label: "Question3", y: ${last.get(10)} },
+				{ label: "Question4",  y: ${last.get(15)}},
+				{ label: "Question5",  y: ${last.get(20)} }
 			]
 			
 		},
 		{
 		type: "column",
-		name:"Question 2",
+		name:"Disagree",
 		showInLegend: true,
 		dataPoints: [
-			{ label: "Answer1",  y: ${last.get(1)} },
-			{ label: "Answer2", y: ${last.get(6)}  },
-			{ label: "Answer3", y: ${last.get(11)} },
-			{ label: "Answer4",  y: ${last.get(16)}},
-			{ label: "Answer5",  y: ${last.get(21)} }
+			{ label: "Question1",  y: ${last.get(1)} },
+			{ label: "Question2", y: ${last.get(6)}  },
+			{ label: "Question3", y: ${last.get(11)} },
+			{ label: "Question4",  y: ${last.get(16)}},
+			{ label: "Question5",  y: ${last.get(21)} }
 		]
 		},
 		{
 			type: "column",
-			name:"Question 3",
+			name:"Strongly Agree",
 			showInLegend: true,
 			dataPoints: [
-				{ label: "Answer1",  y: ${last.get(2)} },
-				{ label: "Answer2", y: ${last.get(7)}  },
-				{ label: "Answer3", y: ${last.get(12)} },
-				{ label: "Answer4",  y: ${last.get(17)}},
-				{ label: "Answer5",  y: ${last.get(22)} }
+				{ label: "Question1",  y: ${last.get(2)} },
+				{ label: "Question2", y: ${last.get(7)}  },
+				{ label: "Question3", y: ${last.get(12)} },
+				{ label: "Question4",  y: ${last.get(17)}},
+				{ label: "Question5",  y: ${last.get(22)} }
 			]
 	   },
      	{
 		   type: "column",
-		   name:"Question 4",
+		   name:"Strongly Disagree",
 		   showInLegend: true,
 			dataPoints: [
-			{ label: "Answer1",  y: ${last.get(3)} },
-			{ label: "Answer2", y: ${last.get(8)}  },
-			{ label: "Answer3", y: ${last.get(13)} },
-		    { label: "Answer4",  y: ${last.get(18)}},
-			{ label: "Answer5",  y: ${last.get(23)} }
+			{ label: "Question1",  y: ${last.get(3)} },
+			{ label: "Question2", y: ${last.get(8)}  },
+			{ label: "Question3", y: ${last.get(13)} },
+		    { label: "Question4",  y: ${last.get(18)}},
+			{ label: "Question5",  y: ${last.get(23)} }
 				]
 		},
 		{
 		type: "column",
-		name:"Question 5",
+		name:"Neither agree nor disagree",
 		showInLegend: true,
 		dataPoints: [
-		{ label: "Answer1",  y: ${last.get(4)} },
-		{ label: "Answer2", y: ${last.get(9)}  },
-		{ label: "Answer3", y: ${last.get(14)} },
-		{ label: "Answer4",  y: ${last.get(19)}},
-		{ label: "Answer5",  y: ${last.get(24)} }
+		{ label: "Question1",  y: ${last.get(4)} },
+		{ label: "Question2", y: ${last.get(9)}  },
+		{ label: "Question3", y: ${last.get(14)} },
+		{ label: "Question4",  y: ${last.get(19)}},
+		{ label: "Question5",  y: ${last.get(24)} }
 	   ]
 		}
 		]

@@ -345,6 +345,7 @@ public String pie(Model model)
     	list1.add(a5[i]);
     	
      }
+   
      
      model.addAttribute("last",list1);
 	return "feed";

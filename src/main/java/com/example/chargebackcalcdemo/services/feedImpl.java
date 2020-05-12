@@ -28,19 +28,19 @@ public class feedImpl implements feed {
 		for(Feedbackquestions f:list)
 		{
 			String f1=f.getAns1();
-			if(f1.equalsIgnoreCase("Agree"))
+			if(f1.equals("Agree"))
 			{
 				agree++;
-			}else if(f1.equalsIgnoreCase("Disagree"))
+			}else if(f1.equals("Disagree"))
 			{
 				dagree++;
-			}else if(f1.equalsIgnoreCase("Stronglyagree"))
+			}else if(f1.equals("Stronglyagree"))
 			{
 				sagree++;
-			}else if(f1.equalsIgnoreCase("Stronglydisagree"))
+			}else if(f1.equals("Stronglydisagree"))
 			{
 				sdagree++;
-			}else if(f1.equalsIgnoreCase("None"))
+			}else if(f1.equals("None"))
 			{
 				nagree++;
 			}
@@ -69,19 +69,19 @@ public class feedImpl implements feed {
 		for(Feedbackquestions f:list)
 		{
 			String f1=f.getAns2();
-			if(f1.equalsIgnoreCase("Agree"))
+			if(f1.equals("Agree"))
 			{
 				agree++;
-			}else if(f1.equalsIgnoreCase("Disagree"))
+			}else if(f1.equals("Disagree"))
 			{
 				dagree++;
-			}else if(f1.equalsIgnoreCase("Stronglyagree"))
+			}else if(f1.equals("Stronglyagree"))
 			{
 				sagree++;
-			}else if(f1.equalsIgnoreCase("Stronglydisagree"))
+			}else if(f1.equals("Stronglydisagree"))
 			{
 				sdagree++;
-			}else if(f1.equalsIgnoreCase("None"))
+			}else if(f1.equals("None"))
 			{
 				nagree++;
 			}
@@ -109,19 +109,19 @@ public class feedImpl implements feed {
 		for(Feedbackquestions f:list)
 		{
 			String f1=f.getAns3();
-			if(f1.equalsIgnoreCase("Agree"))
+			if(f1.equals("Agree"))
 			{
 				agree++;
-			}else if(f1.equalsIgnoreCase("Disagree"))
+			}else if(f1.equals("Disagree"))
 			{
 				dagree++;
-			}else if(f1.equalsIgnoreCase("Stronglyagree"))
+			}else if(f1.equals("Stronglyagree"))
 			{
 				sagree++;
-			}else if(f1.equalsIgnoreCase("Stronglydisagree"))
+			}else if(f1.equals("Stronglydisagree"))
 			{
 				sdagree++;
-			}else if(f1.equalsIgnoreCase("None"))
+			}else if(f1.equals("None"))
 			{
 				nagree++;
 			}
@@ -148,19 +148,19 @@ public class feedImpl implements feed {
 		for(Feedbackquestions f:list)
 		{
 			String f1=f.getAns4();
-			if(f1.equalsIgnoreCase("Agree"))
+			if(f1.equals("Agree"))
 			{
 				agree++;
-			}else if(f1.equalsIgnoreCase("Disagree"))
+			}else if(f1.equals("Disagree"))
 			{
 				dagree++;
-			}else if(f1.equalsIgnoreCase("Stronglyagree"))
+			}else if(f1.equals("Stronglyagree"))
 			{
 				sagree++;
-			}else if(f1.equalsIgnoreCase("Stronglydisagree"))
+			}else if(f1.equals("Stronglydisagree"))
 			{
 				sdagree++;
-			}else if(f1.equalsIgnoreCase("None"))
+			}else if(f1.equals("None"))
 			{
 				nagree++;
 			}
@@ -188,19 +188,19 @@ public class feedImpl implements feed {
 		for(Feedbackquestions f:list)
 		{
 			String f1=f.getAns5();
-			if(f1.equalsIgnoreCase("Agree"))
+			if(f1.equals("Agree"))
 			{
 				agree++;
-			}else if(f1.equalsIgnoreCase("Disagree"))
+			}else if(f1.equals("Disagree"))
 			{
 				dagree++;
-			}else if(f1.equalsIgnoreCase("Stronglyagree"))
+			}else if(f1.equals("Stronglyagree"))
 			{
 				sagree++;
-			}else if(f1.equalsIgnoreCase("Stronglydisagree"))
+			}else if(f1.equals("Stronglydisagree"))
 			{
 				sdagree++;
-			}else if(f1.equalsIgnoreCase("None"))
+			}else if(f1.equals("None"))
 			{
 				nagree++;
 			}
